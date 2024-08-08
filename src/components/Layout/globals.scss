@@ -1,0 +1,134 @@
+// @import url("https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap");
+// @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap'); 
+// @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+
+// .ibm-plex-mono-regular {
+//   font-family: "IBM Plex Mono", monospace;
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+// .ibm-plex-mono-bold {
+//   font-family: "IBM Plex Mono", monospace;
+//   font-weight: 700;
+//   font-style: normal;
+// }
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+body {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  background: black;
+  color: white;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(51, 51, 51) rgb(209, 209, 209);   /* scroll thumb and track */ 
+  font-size: 16px;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+h3 {
+  font-size: 26px;
+  color: red;
+  padding: 10px 0;
+}
+
+// h3::before {
+//   content: url("./../../../static/symbol.png");
+//   width: 5px;
+//   height: 5px;
+//   position: relative;
+//   top: 5px;
+//   left: 5px;
+// }
+
+.bm-menu {
+  background: #ffffff;
+  color: #303030;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+.bm-menu-wrap {
+  top: 0;
+}
+
+.bm-item-list {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 36px;
+  
+  @media (max-width: 768px) {
+    width: 24px;
+    height: 24px;
+    right: 32px;
+    top: 32px;
+  }
+}
+
+.bm-burger-bars {
+  background: #ffffff;
+}
+
+.bm-burger-bars-hover {
+  background: #870e0e;
+}
+
+.bm-cross {
+  background: #303030;
+}
+
+.bm-overlay {
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7) !important;
+}
+
+.bm-item {
+  font-size: 1.4 rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}

@@ -1,0 +1,52 @@
+.merch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+}
+
+.merchCard {
+  width: 220px;
+  height: 230px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}  
+
+.merchImage {
+  width: 170px;
+  height: 170px;
+  border-radius: 90px;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  img {
+    height: 100%; 
+    width: auto; 
+    object-fit: contain;
+    margin: 0 auto;
+  }
+}
+
+.merchName {
+  text-align: center;
+  font-size: 18px;
+}
+
+.merchContact {
+  font-size: 1.5rem;
+  margin: 20px auto;
+  text-align: center;
+
+  a {
+    color: red;
+  }
+
+  @media (max-width: 768px) {
+    font-size: .85rem;
+  }
+}

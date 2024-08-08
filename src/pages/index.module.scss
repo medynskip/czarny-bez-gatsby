@@ -1,0 +1,21 @@
+.content {
+  width: 100%;
+  margin: 50px auto;
+  max-width: 1080px;
+  padding: 0 10px;
+
+  // @media (max-width: 768px) {
+  // }
+}
+
+.welcomeText {
+  font-size: 1.25rem;
+  line-height: 30px;
+  margin: 20px auto;
+
+  @media (max-width: 768px) {
+    font-size: .85rem;
+    line-height: 22px;
+  }
+}
+

@@ -1,128 +1,65 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import React from "react";
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
+import Band from "../components/Band/Band";
+import Concerts from "../components/Concerts";
+import Hero from "../components/Hero";
+import Layout from "../components/layout";  
+import Merch from "../components/Merch/Merch";
+import SeoWrap from "../components/SeoWrap";
+import VideosModule from "../components/VideosModule";
 
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-  },
-  {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-    description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-  },
-]
+import * as  styles from "./index.module.scss";
 
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
-
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
-
-const IndexPage = () => (
-  <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
-    </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
-  </Layout>
-)
+const IndexPage = () => {
+  return (
+    <Layout pageTitle="Czarny Bez - strona główna">
+      <Hero />
+      <div className={styles.content}>
+        <div id="bio">
+          <p className={styles.welcomeText}>
+            Przyszłość i przeszłość jest tu i teraz.
+          </p>
+          <p className={styles.welcomeText}>
+            "… planetę okaleczyły kataklizmy o nieznanych wcześniej rozmiarach.
+            Wypracowane modele społeczne, wartości przestały istnieć. Organizmy
+            państwowe uległy destrukcji. Cywilizacja jaką znamy upadła.
+            Nastąpiła era chaosu … Na wschodzie Europy, której obszar jeszcze
+            nie ostygł pamiętając katastrofalny w skutkach konflikt
+            międzynarodowy, krwawą wojnę religijną, śmiertelną zarazę i upadek
+            człowieczeństwa tworzą się nowe formy ludzkich skupisk. Nasz rodzaj
+            przetrwał a planeta się odradza. Potrzeba bezpieczeństwa i tęsknota
+            za stabilizacją prowadzi nową społeczność do rzeczywistości, w
+            której jak w zwierciadle odbijają się echa pradawnych tradycji i
+            zwyczajów. Przestrzeni, gdzie namacalnie znów czują siłę potężnych
+            starożytnych bogów. Do czasów burzliwych wieców i plemiennych
+            rodowych władców. Świętych lasów i odwiecznych gór. Do
+            cybernetycznej epoki żelaza ale też powrotu więzi międzyludzkich i
+            bliskości z naturą. Życie w równowadze z przyrodą to jedyna szansa,
+            żeby zacząć od nowa. Czas zatoczył krąg … to wtedy na gruzach
+            cywilizacji u zarania nowej odmienionej ludzkości zrodził się Czarny
+            Bez."
+          </p>
+          <p className={styles.welcomeText}>
+            „Zapraszamy w muzyczną podróż do naszych korzeni, do historii często
+            nieznanej, zapomnianej, do refleksji nad współczesnym światem i
+            opowieści o prasłowiańskim duchu, waleczności i odwadze”.
+          </p>
+        </div>
+      
+        <Band />
+        <VideosModule />
+        <Concerts />
+        <Merch />
+      </div>
+    </Layout>
+  );
+};
 
 /**
  * Head export to define metadata for the page
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Home" />
+export const Head = () => <SeoWrap title="Czarny Bez" />;
 
-export default IndexPage
+export default IndexPage;

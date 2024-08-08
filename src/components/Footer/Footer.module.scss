@@ -1,0 +1,35 @@
+.footer {
+  background-color: lightslategray;
+  color: black;
+  font-family: "M PLUS 1 Code", sans-serif;
+}
+
+.footerContainer {
+  width: 60%;
+  margin: 20px auto 0 auto;
+  padding: 50px 0;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    width: 100%;
+    margin: 20px auto 0 auto;
+    padding: 20px;
+  }
+}
+
+.footerText {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.textLine {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}

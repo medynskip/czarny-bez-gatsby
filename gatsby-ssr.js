@@ -7,6 +7,14 @@
 /**
  * @type {import('gatsby').GatsbySSR['onRenderBody']}
  */
-exports.onRenderBody = ({ setHtmlAttributes }) => {
-  setHtmlAttributes({ lang: `en` })
-}
+// exports.onRenderBody = ({ setHtmlAttributes }) => {
+//   setHtmlAttributes({ lang: `en` })
+// }
+
+import React from 'react';
+
+import QueryClientWrap from './src/providers/queryClientProviderWrap';
+
+export const wrapRootElement = ({ element }) => {
+  return <QueryClientWrap>{element}</QueryClientWrap>;
+};

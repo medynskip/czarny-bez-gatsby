@@ -3,7 +3,7 @@ import React from "react";
 import Band from "../components/Band/Band";
 import Concerts from "../components/Concerts";
 import Hero from "../components/Hero";
-import Layout from "../components/layout";  
+import Layout from "../components/Layout";  
 import Merch from "../components/Merch/Merch";
 import SeoWrap from "../components/SeoWrap";
 import VideosModule from "../components/VideosModule";
